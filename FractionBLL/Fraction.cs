@@ -54,8 +54,28 @@ namespace FractionBLL
             }
             return SimpleFraction;
         }
-        //public static Fraction MathSimplification()
-        //{
-        //}
+        public static Fraction MathSimplification(Fraction fraction) 
+        {
+            int PGCD = (int)GCD((ulong)fraction.denominateur,(ulong)fraction.numerateur);
+            if (PGCD != 1)
+            {
+                fraction.denominateur = fraction.denominateur / PGCD;
+                fraction.numerateur = fraction.numerateur / PGCD;
+            }
+            return fraction;
+        }
+        private static ulong GCD(ulong a, ulong b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            return a == 0 ? b : a;
+        }
+
     }
 }
