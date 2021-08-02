@@ -31,33 +31,33 @@ namespace LaboAutonome1
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Arith = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ArithValidation = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Compa = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ArithMultFrac2 = new System.Windows.Forms.TextBox();
+            this.ArithMultFrac1 = new System.Windows.Forms.TextBox();
+            this.ArithMultFracDen2 = new System.Windows.Forms.TextBox();
+            this.ArithMultFracDen1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ArithMultBtn = new System.Windows.Forms.Button();
+            this.ArithValidation = new System.Windows.Forms.CheckBox();
+            this.ArithMultFracRes = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ArithMultFracComboBox = new System.Windows.Forms.ComboBox();
+            this.ArithMultFracNum2 = new System.Windows.Forms.TextBox();
+            this.ArithMultFracNum1 = new System.Windows.Forms.TextBox();
+            this.Compa = new System.Windows.Forms.TabPage();
+            this.CompaMultFract2 = new System.Windows.Forms.TextBox();
+            this.CompaMultFract1 = new System.Windows.Forms.TextBox();
+            this.CompaFractDen2 = new System.Windows.Forms.TextBox();
+            this.CompaFractDen1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.CompaFractBtn = new System.Windows.Forms.Button();
+            this.CompaBox = new System.Windows.Forms.CheckBox();
+            this.CompaFractRes = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.CompaFractComboBox = new System.Windows.Forms.ComboBox();
+            this.CompaFractNum2 = new System.Windows.Forms.TextBox();
+            this.CompaFractNum1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Arith.SuspendLayout();
             this.Compa.SuspendLayout();
@@ -76,19 +76,19 @@ namespace LaboAutonome1
             // 
             // Arith
             // 
-            this.Arith.Controls.Add(this.textBox10);
-            this.Arith.Controls.Add(this.textBox9);
-            this.Arith.Controls.Add(this.textBox8);
-            this.Arith.Controls.Add(this.textBox7);
+            this.Arith.Controls.Add(this.ArithMultFrac2);
+            this.Arith.Controls.Add(this.ArithMultFrac1);
+            this.Arith.Controls.Add(this.ArithMultFracDen2);
+            this.Arith.Controls.Add(this.ArithMultFracDen1);
             this.Arith.Controls.Add(this.label3);
             this.Arith.Controls.Add(this.label2);
-            this.Arith.Controls.Add(this.button1);
+            this.Arith.Controls.Add(this.ArithMultBtn);
             this.Arith.Controls.Add(this.ArithValidation);
-            this.Arith.Controls.Add(this.textBox3);
+            this.Arith.Controls.Add(this.ArithMultFracRes);
             this.Arith.Controls.Add(this.label1);
-            this.Arith.Controls.Add(this.comboBox1);
-            this.Arith.Controls.Add(this.textBox2);
-            this.Arith.Controls.Add(this.textBox1);
+            this.Arith.Controls.Add(this.ArithMultFracComboBox);
+            this.Arith.Controls.Add(this.ArithMultFracNum2);
+            this.Arith.Controls.Add(this.ArithMultFracNum1);
             this.Arith.Location = new System.Drawing.Point(4, 24);
             this.Arith.Name = "Arith";
             this.Arith.Padding = new System.Windows.Forms.Padding(3);
@@ -97,100 +97,33 @@ namespace LaboAutonome1
             this.Arith.Text = "Arith";
             this.Arith.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ArithMultFrac2
             // 
-            this.button1.Location = new System.Drawing.Point(132, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(475, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Effectuer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ArithMultFrac2.Location = new System.Drawing.Point(446, 86);
+            this.ArithMultFrac2.Name = "ArithMultFrac2";
+            this.ArithMultFrac2.Size = new System.Drawing.Size(42, 23);
+            this.ArithMultFrac2.TabIndex = 12;
             // 
-            // ArithValidation
+            // ArithMultFrac1
             // 
-            this.ArithValidation.AutoSize = true;
-            this.ArithValidation.Location = new System.Drawing.Point(338, 143);
-            this.ArithValidation.Name = "ArithValidation";
-            this.ArithValidation.Size = new System.Drawing.Size(15, 14);
-            this.ArithValidation.TabIndex = 5;
-            this.ArithValidation.UseVisualStyleBackColor = true;
+            this.ArithMultFrac1.Location = new System.Drawing.Point(57, 86);
+            this.ArithMultFrac1.Name = "ArithMultFrac1";
+            this.ArithMultFrac1.Size = new System.Drawing.Size(42, 23);
+            this.ArithMultFrac1.TabIndex = 11;
             // 
-            // textBox3
+            // ArithMultFracDen2
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 225);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(475, 123);
-            this.textBox3.TabIndex = 4;
+            this.ArithMultFracDen2.Location = new System.Drawing.Point(494, 102);
+            this.ArithMultFracDen2.Name = "ArithMultFracDen2";
+            this.ArithMultFracDen2.Size = new System.Drawing.Size(171, 23);
+            this.ArithMultFracDen2.TabIndex = 10;
             // 
-            // label1
+            // ArithMultFracDen1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Voulez vous sauvegarder le resusltat?";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "+",
-            "-",
-            "*",
-            "/"});
-            this.comboBox1.Location = new System.Drawing.Point(300, 86);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(494, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(105, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 23);
-            this.textBox1.TabIndex = 0;
-            // 
-            // Compa
-            // 
-            this.Compa.Controls.Add(this.textBox4);
-            this.Compa.Controls.Add(this.textBox5);
-            this.Compa.Controls.Add(this.textBox6);
-            this.Compa.Controls.Add(this.textBox11);
-            this.Compa.Controls.Add(this.label4);
-            this.Compa.Controls.Add(this.label5);
-            this.Compa.Controls.Add(this.button2);
-            this.Compa.Controls.Add(this.checkBox1);
-            this.Compa.Controls.Add(this.textBox12);
-            this.Compa.Controls.Add(this.label6);
-            this.Compa.Controls.Add(this.comboBox2);
-            this.Compa.Controls.Add(this.textBox13);
-            this.Compa.Controls.Add(this.textBox14);
-            this.Compa.Location = new System.Drawing.Point(4, 24);
-            this.Compa.Name = "Compa";
-            this.Compa.Padding = new System.Windows.Forms.Padding(3);
-            this.Compa.Size = new System.Drawing.Size(792, 422);
-            this.Compa.TabIndex = 1;
-            this.Compa.Text = "Compa";
-            this.Compa.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Fraction 1";
+            this.ArithMultFracDen1.Location = new System.Drawing.Point(105, 102);
+            this.ArithMultFracDen1.Name = "ArithMultFracDen1";
+            this.ArithMultFracDen1.Size = new System.Drawing.Size(171, 23);
+            this.ArithMultFracDen1.TabIndex = 9;
             // 
             // label3
             // 
@@ -201,61 +134,129 @@ namespace LaboAutonome1
             this.label3.TabIndex = 8;
             this.label3.Text = "Fraction 2";
             // 
-            // textBox7
+            // label2
             // 
-            this.textBox7.Location = new System.Drawing.Point(105, 102);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(171, 23);
-            this.textBox7.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(161, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Fraction 1";
             // 
-            // textBox8
+            // ArithMultBtn
             // 
-            this.textBox8.Location = new System.Drawing.Point(494, 102);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(171, 23);
-            this.textBox8.TabIndex = 10;
+            this.ArithMultBtn.Location = new System.Drawing.Point(132, 187);
+            this.ArithMultBtn.Name = "ArithMultBtn";
+            this.ArithMultBtn.Size = new System.Drawing.Size(475, 23);
+            this.ArithMultBtn.TabIndex = 6;
+            this.ArithMultBtn.Text = "Effectuer";
+            this.ArithMultBtn.UseVisualStyleBackColor = true;
+            this.ArithMultBtn.Click += new System.EventHandler(this.ArithMultBtn_Click);
             // 
-            // textBox9
+            // ArithValidation
             // 
-            this.textBox9.Location = new System.Drawing.Point(57, 86);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(42, 23);
-            this.textBox9.TabIndex = 11;
+            this.ArithValidation.AutoSize = true;
+            this.ArithValidation.Location = new System.Drawing.Point(338, 143);
+            this.ArithValidation.Name = "ArithValidation";
+            this.ArithValidation.Size = new System.Drawing.Size(15, 14);
+            this.ArithValidation.TabIndex = 5;
+            this.ArithValidation.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // ArithMultFracRes
             // 
-            this.textBox10.Location = new System.Drawing.Point(446, 86);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(42, 23);
-            this.textBox10.TabIndex = 12;
+            this.ArithMultFracRes.Location = new System.Drawing.Point(132, 225);
+            this.ArithMultFracRes.Multiline = true;
+            this.ArithMultFracRes.Name = "ArithMultFracRes";
+            this.ArithMultFracRes.ReadOnly = true;
+            this.ArithMultFracRes.Size = new System.Drawing.Size(475, 123);
+            this.ArithMultFracRes.TabIndex = 4;
             // 
-            // textBox4
+            // label1
             // 
-            this.textBox4.Location = new System.Drawing.Point(450, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(42, 23);
-            this.textBox4.TabIndex = 25;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(132, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Voulez vous sauvegarder le resusltat?";
             // 
-            // textBox5
+            // ArithMultFracComboBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(61, 96);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(42, 23);
-            this.textBox5.TabIndex = 24;
+            this.ArithMultFracComboBox.FormattingEnabled = true;
+            this.ArithMultFracComboBox.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "*",
+            "/"});
+            this.ArithMultFracComboBox.Location = new System.Drawing.Point(300, 86);
+            this.ArithMultFracComboBox.Name = "ArithMultFracComboBox";
+            this.ArithMultFracComboBox.Size = new System.Drawing.Size(121, 23);
+            this.ArithMultFracComboBox.TabIndex = 2;
             // 
-            // textBox6
+            // ArithMultFracNum2
             // 
-            this.textBox6.Location = new System.Drawing.Point(498, 112);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(171, 23);
-            this.textBox6.TabIndex = 23;
+            this.ArithMultFracNum2.Location = new System.Drawing.Point(494, 73);
+            this.ArithMultFracNum2.Name = "ArithMultFracNum2";
+            this.ArithMultFracNum2.Size = new System.Drawing.Size(171, 23);
+            this.ArithMultFracNum2.TabIndex = 1;
             // 
-            // textBox11
+            // ArithMultFracNum1
             // 
-            this.textBox11.Location = new System.Drawing.Point(109, 112);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(171, 23);
-            this.textBox11.TabIndex = 22;
+            this.ArithMultFracNum1.Location = new System.Drawing.Point(105, 73);
+            this.ArithMultFracNum1.Name = "ArithMultFracNum1";
+            this.ArithMultFracNum1.Size = new System.Drawing.Size(171, 23);
+            this.ArithMultFracNum1.TabIndex = 0;
+            // 
+            // Compa
+            // 
+            this.Compa.Controls.Add(this.CompaMultFract2);
+            this.Compa.Controls.Add(this.CompaMultFract1);
+            this.Compa.Controls.Add(this.CompaFractDen2);
+            this.Compa.Controls.Add(this.CompaFractDen1);
+            this.Compa.Controls.Add(this.label4);
+            this.Compa.Controls.Add(this.label5);
+            this.Compa.Controls.Add(this.CompaFractBtn);
+            this.Compa.Controls.Add(this.CompaBox);
+            this.Compa.Controls.Add(this.CompaFractRes);
+            this.Compa.Controls.Add(this.label6);
+            this.Compa.Controls.Add(this.CompaFractComboBox);
+            this.Compa.Controls.Add(this.CompaFractNum2);
+            this.Compa.Controls.Add(this.CompaFractNum1);
+            this.Compa.Location = new System.Drawing.Point(4, 24);
+            this.Compa.Name = "Compa";
+            this.Compa.Padding = new System.Windows.Forms.Padding(3);
+            this.Compa.Size = new System.Drawing.Size(792, 422);
+            this.Compa.TabIndex = 1;
+            this.Compa.Text = "Compa";
+            this.Compa.UseVisualStyleBackColor = true;
+            // 
+            // CompaMultFract2
+            // 
+            this.CompaMultFract2.Location = new System.Drawing.Point(450, 96);
+            this.CompaMultFract2.Name = "CompaMultFract2";
+            this.CompaMultFract2.Size = new System.Drawing.Size(42, 23);
+            this.CompaMultFract2.TabIndex = 25;
+            // 
+            // CompaMultFract1
+            // 
+            this.CompaMultFract1.Location = new System.Drawing.Point(61, 96);
+            this.CompaMultFract1.Name = "CompaMultFract1";
+            this.CompaMultFract1.Size = new System.Drawing.Size(42, 23);
+            this.CompaMultFract1.TabIndex = 24;
+            // 
+            // CompaFractDen2
+            // 
+            this.CompaFractDen2.Location = new System.Drawing.Point(498, 112);
+            this.CompaFractDen2.Name = "CompaFractDen2";
+            this.CompaFractDen2.Size = new System.Drawing.Size(171, 23);
+            this.CompaFractDen2.TabIndex = 23;
+            // 
+            // CompaFractDen1
+            // 
+            this.CompaFractDen1.Location = new System.Drawing.Point(109, 112);
+            this.CompaFractDen1.Name = "CompaFractDen1";
+            this.CompaFractDen1.Size = new System.Drawing.Size(171, 23);
+            this.CompaFractDen1.TabIndex = 22;
             // 
             // label4
             // 
@@ -275,32 +276,33 @@ namespace LaboAutonome1
             this.label5.TabIndex = 20;
             this.label5.Text = "Fraction 1";
             // 
-            // button2
+            // CompaFractBtn
             // 
-            this.button2.Location = new System.Drawing.Point(140, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(475, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Effectuer";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CompaFractBtn.Location = new System.Drawing.Point(140, 197);
+            this.CompaFractBtn.Name = "CompaFractBtn";
+            this.CompaFractBtn.Size = new System.Drawing.Size(475, 23);
+            this.CompaFractBtn.TabIndex = 19;
+            this.CompaFractBtn.Text = "Effectuer";
+            this.CompaFractBtn.UseVisualStyleBackColor = true;
+            this.CompaFractBtn.Click += new System.EventHandler(this.CompaFractBtn_Click);
             // 
-            // checkBox1
+            // CompaBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(346, 153);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CompaBox.AutoSize = true;
+            this.CompaBox.Location = new System.Drawing.Point(346, 153);
+            this.CompaBox.Name = "CompaBox";
+            this.CompaBox.Size = new System.Drawing.Size(15, 14);
+            this.CompaBox.TabIndex = 18;
+            this.CompaBox.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // CompaFractRes
             // 
-            this.textBox12.Location = new System.Drawing.Point(140, 235);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(475, 123);
-            this.textBox12.TabIndex = 17;
+            this.CompaFractRes.Location = new System.Drawing.Point(140, 235);
+            this.CompaFractRes.Multiline = true;
+            this.CompaFractRes.Name = "CompaFractRes";
+            this.CompaFractRes.ReadOnly = true;
+            this.CompaFractRes.Size = new System.Drawing.Size(475, 123);
+            this.CompaFractRes.TabIndex = 17;
             // 
             // label6
             // 
@@ -311,33 +313,33 @@ namespace LaboAutonome1
             this.label6.TabIndex = 16;
             this.label6.Text = "Voulez vous sauvegarder le resusltat?";
             // 
-            // comboBox2
+            // CompaFractComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.CompaFractComboBox.FormattingEnabled = true;
+            this.CompaFractComboBox.Items.AddRange(new object[] {
             "<",
             "<=",
             ">",
             ">=",
             "=="});
-            this.comboBox2.Location = new System.Drawing.Point(304, 96);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 15;
+            this.CompaFractComboBox.Location = new System.Drawing.Point(304, 96);
+            this.CompaFractComboBox.Name = "CompaFractComboBox";
+            this.CompaFractComboBox.Size = new System.Drawing.Size(121, 23);
+            this.CompaFractComboBox.TabIndex = 15;
             // 
-            // textBox13
+            // CompaFractNum2
             // 
-            this.textBox13.Location = new System.Drawing.Point(498, 83);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(171, 23);
-            this.textBox13.TabIndex = 14;
+            this.CompaFractNum2.Location = new System.Drawing.Point(498, 83);
+            this.CompaFractNum2.Name = "CompaFractNum2";
+            this.CompaFractNum2.Size = new System.Drawing.Size(171, 23);
+            this.CompaFractNum2.TabIndex = 14;
             // 
-            // textBox14
+            // CompaFractNum1
             // 
-            this.textBox14.Location = new System.Drawing.Point(109, 83);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(171, 23);
-            this.textBox14.TabIndex = 13;
+            this.CompaFractNum1.Location = new System.Drawing.Point(109, 83);
+            this.CompaFractNum1.Name = "CompaFractNum1";
+            this.CompaFractNum1.Size = new System.Drawing.Size(171, 23);
+            this.CompaFractNum1.TabIndex = 13;
             // 
             // Form1
             // 
@@ -360,33 +362,33 @@ namespace LaboAutonome1
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Arith;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ArithMultBtn;
         private System.Windows.Forms.CheckBox ArithValidation;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ArithMultFracRes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox ArithMultFracComboBox;
+        private System.Windows.Forms.TextBox ArithMultFracNum2;
+        private System.Windows.Forms.TextBox ArithMultFracNum1;
         private System.Windows.Forms.TabPage Compa;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox ArithMultFrac2;
+        private System.Windows.Forms.TextBox ArithMultFrac1;
+        private System.Windows.Forms.TextBox ArithMultFracDen2;
+        private System.Windows.Forms.TextBox ArithMultFracDen1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox CompaMultFract2;
+        private System.Windows.Forms.TextBox CompaMultFract1;
+        private System.Windows.Forms.TextBox CompaFractDen2;
+        private System.Windows.Forms.TextBox CompaFractDen1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Button CompaFractBtn;
+        private System.Windows.Forms.CheckBox CompaBox;
+        private System.Windows.Forms.TextBox CompaFractRes;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.ComboBox CompaFractComboBox;
+        private System.Windows.Forms.TextBox CompaFractNum2;
+        private System.Windows.Forms.TextBox CompaFractNum1;
     }
 }
 

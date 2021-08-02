@@ -2,7 +2,7 @@
 
 namespace FractionBLL
 {
-    public class Fraction  : IComparable<Fraction>
+    public class Fraction  : IComparable , IEquatable<object>
     {
         
         private int numerateur;
@@ -46,7 +46,7 @@ namespace FractionBLL
             } else if(fraction.Numerateur == fraction.Denominateur)
             {
                 int res = fraction.Numerateur / fraction.Denominateur;
-                SimpleFraction = new Tuple<int, int, int>(res, 1, 1);
+                SimpleFraction = new Tuple<int, int, int>(res, 0, 0);
             }
             else
             {
@@ -81,7 +81,6 @@ namespace FractionBLL
 
             return a == 0 ? b : a;
         }
-
         public static Fraction operator +(Fraction a, Fraction b)
         {
             Fraction res = new Fraction(1,1);
@@ -129,11 +128,10 @@ namespace FractionBLL
             }
             return new Tuple<Fraction, Fraction, Fraction>(a,b,res);
         }
-
-        public int CompareTo(Fraction obj)
+        public int CompareTo(object obj)
         {
             if (obj == null) return 1;
-            Fraction otherFraction = obj;
+            Fraction otherFraction = obj as Fraction;
             decimal res = (decimal)otherFraction;
             if (otherFraction != null)
             {
@@ -147,7 +145,94 @@ namespace FractionBLL
             }
             
         }
-
+        public override bool Equals(object other)
+        {
+            Fraction ThisFraction = other as Fraction;
+            if (other == null)
+            {
+                return false;
+            }
+            decimal thisFraction = (decimal)this;
+            decimal otherFraction = (decimal)ThisFraction;
+            if (thisFraction == otherFraction)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(this.Denominateur,this.numerateur);
+        }
+        public static bool operator <(Fraction a, Fraction b)
+        {
+            if ((decimal)a < (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator >(Fraction a, Fraction b)
+        {
+            if ((decimal)a > (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator <=(Fraction a, Fraction b)
+        {
+            if ((decimal)a <= (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator >=(Fraction a, Fraction b)
+        {
+            if ((decimal)a >= (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator ==(Fraction a, Fraction b)
+        {
+            if ((decimal)a == (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool operator !=(Fraction a, Fraction b)
+        {
+            if ((decimal)a != (decimal)b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static implicit operator string(Fraction a)
         {
             Tuple<int,int,int> res = Fraction.UserSimplification(a);
@@ -167,6 +252,10 @@ namespace FractionBLL
         public static implicit operator decimal(Fraction a)
         {
             return ((decimal)(a.Numerateur) / (decimal)(a.Denominateur));
+        }
+        public override string ToString()
+        {
+            return  this.Numerateur + "/" + this.Denominateur;
         }
 
     }

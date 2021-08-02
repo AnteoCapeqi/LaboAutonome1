@@ -7,7 +7,7 @@ namespace TestFraction
     [TestClass]
     public class FractionSimplificationTest
     {
-        [DataRow(new int[3] { 1, 1 , 1}, new int[2] { 5, 5 }, DisplayName = "Simplification d'une Fraction lambda 1")]
+        [DataRow(new int[3] { 1, 0 , 0}, new int[2] { 5, 5 }, DisplayName = "Simplification d'une Fraction lambda 1")]
         [DataRow(new int[3] { 1, 1 , 4 } ,new int[2] { 4, 5 }, DisplayName = "Simplification d'une Fraction lambda 2")]
         [DataRow(new int[3] { 0, 1, 4 }, new int[2] { 4, 1 }, DisplayName = "Simplification d'une Fraction lambda 3")]
         [DataRow(new int[3] { 10, 3, 4 }, new int[2] { 4, 43 }, DisplayName = "Simplification d'une Fraction lambda 4")]
