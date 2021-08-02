@@ -2,7 +2,7 @@
 
 namespace FractionBLL
 {
-    public class Fraction // : IComparable<Fraction>
+    public class Fraction  : IComparable<Fraction>
     {
         
         private int numerateur;
@@ -129,6 +129,25 @@ namespace FractionBLL
             }
             return new Tuple<Fraction, Fraction, Fraction>(a,b,res);
         }
+
+        public int CompareTo(Fraction obj)
+        {
+            if (obj == null) return 1;
+            Fraction otherFraction = obj;
+            decimal res = (decimal)otherFraction;
+            if (otherFraction != null)
+            {
+                Fraction thisFraction = this;
+                decimal res2 = (decimal)thisFraction;
+                return res2.CompareTo(res);
+            }
+            else 
+            {
+                throw new ArgumentException("Object is not a Fraction");
+            }
+            
+        }
+
         public static implicit operator string(Fraction a)
         {
             Tuple<int,int,int> res = Fraction.UserSimplification(a);
@@ -149,5 +168,6 @@ namespace FractionBLL
         {
             return ((decimal)(a.Numerateur) / (decimal)(a.Denominateur));
         }
+
     }
 }
