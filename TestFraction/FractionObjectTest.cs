@@ -25,7 +25,7 @@ namespace TestFraction
             }
             catch (Exception ex) // <-- Expected Exception class
             {
-                Assert.AreEqual("Le dénominateur ne peut etre plus petit que 0", ex.Message);
+                Assert.AreEqual("Le dénominateur ne peut etre egal a 0", ex.Message);
             }
         }
     }

@@ -2,9 +2,9 @@
 
 namespace FractionBLL
 {
-    public class Fraction 
+    public class Fraction // : IComparable<Fraction>
     {
-
+        
         private int numerateur;
         public int Numerateur
         {
@@ -18,7 +18,7 @@ namespace FractionBLL
             set {
                 if (value == 0)
                 {
-                    throw new Exception("Le dénominateur ne peut etre plus petit que 0");
+                    throw new Exception("Le dénominateur ne peut etre egal a 0");
                 }
                 else
                 {
@@ -129,6 +129,25 @@ namespace FractionBLL
             }
             return new Tuple<Fraction, Fraction, Fraction>(a,b,res);
         }
+        public static implicit operator string(Fraction a)
+        {
+            Tuple<int,int,int> res = Fraction.UserSimplification(a);
+            return res.Item1 + " " + res.Item2 + "/" + res.Item3;
 
+        }
+        public static explicit operator Fraction(decimal a)
+        {
+            int val = 1;
+            while (a % 1 != 0)
+            {
+                a *= 10;
+                val *= 10;
+            }
+            return Fraction.MathSimplification(new Fraction(val , (int)a));
+        }
+        public static implicit operator decimal(Fraction a)
+        {
+            return ((decimal)(a.Numerateur) / (decimal)(a.Denominateur));
+        }
     }
 }
