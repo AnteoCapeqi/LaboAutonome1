@@ -14,8 +14,19 @@ namespace FractionBLL
         public int Denominateur
         {
             get { return denominateur; }
-            set { denominateur = value; }
+            set {
+                if (value == 0)
+                {
+                    throw new Exception("Le dénominateur ne peut etre plus petit que 0");
+                }
+                else 
+                {
+                    denominateur = value;
+                }
+                
+            }
         }
+
         public Fraction(int pDenominateur, int pNumerateur) 
         {
             this.Denominateur = pDenominateur;
