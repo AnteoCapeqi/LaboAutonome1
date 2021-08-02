@@ -88,6 +88,17 @@ namespace FractionBLL
             res = Fraction.MathSimplification(res);
             return res;
         }
+        public static Fraction operator -(Fraction a, Fraction b)
+        {
+            Fraction res = new Fraction(1, 1);
+            Tuple<Fraction, Fraction, Fraction> temp = DenominateurCommun(a, b, res);
+            a = temp.Item1;
+            b = temp.Item2;
+            res = temp.Item3;
+            res.Numerateur = a.Numerateur - b.Numerateur;
+            res = Fraction.MathSimplification(res);
+            return res;
+        }
         private static Tuple<Fraction, Fraction, Fraction> DenominateurCommun(Fraction a, Fraction b, Fraction res) 
         {
             if (a.Denominateur != b.Denominateur)
