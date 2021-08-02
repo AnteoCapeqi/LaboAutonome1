@@ -54,6 +54,11 @@ namespace FractionBLL
             }
             return SimpleFraction;
         }
+        /// <summary>
+        /// Permet de simplifier Mathematiquement nos fraction
+        /// </summary>
+        /// <param name="Fraction"></param>
+        /// <returns>Fraction irreductible</returns>
         public static Fraction MathSimplification(Fraction fraction) 
         {
             int PGCD = (int)GCD((ulong)fraction.Denominateur,(ulong)fraction.Numerateur);
@@ -77,7 +82,7 @@ namespace FractionBLL
             return a == 0 ? b : a;
         }
 
-        public static Fraction operator +(Fraction a, Fraction b) 
+        public static Fraction operator +(Fraction a, Fraction b)
         {
             Fraction res = new Fraction(1,1);
             Tuple < Fraction, Fraction, Fraction > temp = DenominateurCommun(a, b, res);
@@ -98,6 +103,14 @@ namespace FractionBLL
             res.Numerateur = a.Numerateur - b.Numerateur;
             res = Fraction.MathSimplification(res);
             return res;
+        }
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            return Fraction.MathSimplification(new Fraction(a.Denominateur * b.Denominateur, a.Numerateur * b.Numerateur));
+        }
+        public static Fraction operator /(Fraction a, Fraction b)
+        {
+            return Fraction.MathSimplification(new Fraction(a.Denominateur * b.Numerateur, a.Numerateur * b.Denominateur));
         }
         private static Tuple<Fraction, Fraction, Fraction> DenominateurCommun(Fraction a, Fraction b, Fraction res) 
         {
