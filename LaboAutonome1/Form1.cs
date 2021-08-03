@@ -17,6 +17,7 @@ namespace LaboAutonome1
         {
             InitializeComponent();
             GetArchLogs();
+            GetCompLogs();
         }
 
         private void ArithMultBtn_Click(object sender, EventArgs e)
@@ -99,6 +100,26 @@ namespace LaboAutonome1
                 
             }
         }
+        private void GetCompLogs()
+        {
+            CompaListView.Items.Clear();
+            List<CompaLogs> logs = FractionBLL.GetLogsFromDAL.GetCompaLogs();
+            foreach (CompaLogs log in logs)
+            {
+                string[] row = new string[] {
+                    log.Date,
+                    log.Heure,
+                    log.Fraction_1,
+                    log.Operant,
+                    log.Fraction_2,
+                    log.Resultat
+                };
+                var lstView = new ListViewItem(row);
+                lstView.Tag = log;
+                CompaListView.Items.Add(lstView);
+
+            }
+        }
         private void CompaFractBtn_Click(object sender, EventArgs e)
         {
             Fraction fraction1 = Fraction.MathSimplification(new Fraction(
@@ -151,6 +172,11 @@ namespace LaboAutonome1
         private void UpdateBtnArith_Click(object sender, EventArgs e)
         {
             GetArchLogs();
+        }
+
+        private void UpdateBtnCompa_Click(object sender, EventArgs e)
+        {
+            GetCompLogs();
         }
     }
 }

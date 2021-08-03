@@ -19,5 +19,16 @@ namespace FractionBLL
             }
             return logs;
         }
+        public static List<CompaLogs> GetCompaLogs()
+        {
+            List<string[]> content = FractionDAL.ReadToFiles.GetDataInFile(false);
+            List<CompaLogs> logs = new List<CompaLogs>();
+            foreach (var item in content)
+            {
+                CompaLogs tempLog = new CompaLogs(item[0], item[1], item[2], item[3], item[4], item[5]);
+                logs.Add(tempLog);
+            }
+            return logs;
+        }
     }
 }

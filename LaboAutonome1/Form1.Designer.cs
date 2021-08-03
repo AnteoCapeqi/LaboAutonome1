@@ -70,8 +70,14 @@ namespace LaboAutonome1
             this.Fraction2 = new System.Windows.Forms.ColumnHeader();
             this.Resultat = new System.Windows.Forms.ColumnHeader();
             this.CompaLogs = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.CompaListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.UpdateBtnCompa = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Arith.SuspendLayout();
             this.Compa.SuspendLayout();
@@ -456,8 +462,8 @@ namespace LaboAutonome1
             // 
             // CompaLogs
             // 
-            this.CompaLogs.Controls.Add(this.button2);
-            this.CompaLogs.Controls.Add(this.listView2);
+            this.CompaLogs.Controls.Add(this.CompaListView);
+            this.CompaLogs.Controls.Add(this.UpdateBtnCompa);
             this.CompaLogs.Location = new System.Drawing.Point(4, 24);
             this.CompaLogs.Name = "CompaLogs";
             this.CompaLogs.Padding = new System.Windows.Forms.Padding(3);
@@ -466,24 +472,66 @@ namespace LaboAutonome1
             this.CompaLogs.Text = "Compa";
             this.CompaLogs.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // CompaListView
             // 
-            this.button2.Location = new System.Drawing.Point(24, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CompaListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.CompaListView.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CompaListView.GridLines = true;
+            this.CompaListView.HideSelection = false;
+            this.CompaListView.Location = new System.Drawing.Point(311, 3);
+            this.CompaListView.Name = "CompaListView";
+            this.CompaListView.Size = new System.Drawing.Size(470, 388);
+            this.CompaListView.TabIndex = 4;
+            this.CompaListView.UseCompatibleStateImageBehavior = false;
+            this.CompaListView.View = System.Windows.Forms.View.Details;
             // 
-            // listView2
+            // columnHeader1
             // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(311, 3);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(470, 388);
-            this.listView2.TabIndex = 2;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.columnHeader1.Text = "Date";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Heure";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Fraction 1";
+            this.columnHeader3.Width = 70;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Operateur";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 80;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Fraction 2";
+            this.columnHeader5.Width = 70;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Resultat";
+            this.columnHeader6.Width = 80;
+            // 
+            // UpdateBtnCompa
+            // 
+            this.UpdateBtnCompa.Location = new System.Drawing.Point(24, 176);
+            this.UpdateBtnCompa.Name = "UpdateBtnCompa";
+            this.UpdateBtnCompa.Size = new System.Drawing.Size(232, 23);
+            this.UpdateBtnCompa.TabIndex = 3;
+            this.UpdateBtnCompa.Text = "Update";
+            this.UpdateBtnCompa.UseVisualStyleBackColor = true;
+            this.UpdateBtnCompa.Click += new System.EventHandler(this.UpdateBtnCompa_Click);
             // 
             // Form1
             // 
@@ -543,14 +591,20 @@ namespace LaboAutonome1
         private System.Windows.Forms.Button UpdateBtnArith;
         private System.Windows.Forms.ListView ArithLogs1;
         private System.Windows.Forms.TabPage CompaLogs;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Button UpdateBtnCompa;
         private System.Windows.Forms.ColumnHeader Date;
         private System.Windows.Forms.ColumnHeader Heure;
         private System.Windows.Forms.ColumnHeader Fraction1;
         private System.Windows.Forms.ColumnHeader Operateur;
         private System.Windows.Forms.ColumnHeader Fraction2;
         private System.Windows.Forms.ColumnHeader Resultat;
+        private System.Windows.Forms.ListView CompaListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 
