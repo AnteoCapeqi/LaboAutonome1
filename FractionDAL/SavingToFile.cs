@@ -5,8 +5,8 @@ namespace FractionDAL
 {
     public class SavingToFile
     {
-        private static string GetArithLogPath(){return Path.GetFullPath("ArithLog.csv");}
-        private static string GetCompLogPath() {return Path.GetFullPath("CompaLog.csv");}
+        public static string GetArithLogPath(){return Path.GetFullPath("ArithLog.csv");}
+        public static string GetCompLogPath() {return Path.GetFullPath("CompaLog.csv");}
         public static void SaveToArithLog(Tuple<string, string, string, string> tuple)
         {
             SavingInFile(GetArithLogPath(), GetContent(tuple));

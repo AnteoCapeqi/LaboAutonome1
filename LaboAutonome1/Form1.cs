@@ -124,6 +124,7 @@ namespace LaboAutonome1
             {
                 SavingBLL.CallDALMethodCompa(fraction1, fraction2, this.CompaFractComboBox.SelectedItem.ToString(), result.ToString());
             }
+
         }
     }
 }
