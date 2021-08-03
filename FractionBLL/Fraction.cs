@@ -262,6 +262,6 @@ namespace FractionBLL
         {
             return  this.Numerateur + "/" + this.Denominateur;
         }
-
+        
     }
 }

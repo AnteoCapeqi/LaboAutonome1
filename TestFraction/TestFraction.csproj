@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FractionBLL\FractionBLL.csproj" />
+    <ProjectReference Include="..\FractionDAL\FractionDAL.csproj" />
   </ItemGroup>
 
 </Project>
