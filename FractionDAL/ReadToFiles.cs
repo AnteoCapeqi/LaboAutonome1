@@ -21,16 +21,13 @@ namespace FractionDAL
                 content = File.ReadAllText(SavingToFile.GetCompLogPath());
             }
             List<string[]> listContent = new List<string[]>();
-            string[] arrayContent = content.Split(" , ");
+            string[] arrayContent = content.Split("\n");
             string[] fList;
-            for (int i = 0; i < arrayContent.Length; i += 6)
+            for (int i = 1; i < arrayContent.Length ; i++)
             {
                 fList = new string[6];
-                for (int u = 0; u < 6; u++)
-                {
-                    fList[u] = arrayContent[i + u];
-                }
-                
+                fList = arrayContent[i].Split(",");
+                listContent.Add(fList);
             }
             return listContent;
             

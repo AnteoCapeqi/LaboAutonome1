@@ -61,9 +61,15 @@ namespace LaboAutonome1
             this.Logs = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.ArithLogs = new System.Windows.Forms.TabPage();
+            this.UpdateBtnArith = new System.Windows.Forms.Button();
+            this.ArithLogs1 = new System.Windows.Forms.ListView();
+            this.Date = new System.Windows.Forms.ColumnHeader();
+            this.Heure = new System.Windows.Forms.ColumnHeader();
+            this.Fraction1 = new System.Windows.Forms.ColumnHeader();
+            this.Operateur = new System.Windows.Forms.ColumnHeader();
+            this.Fraction2 = new System.Windows.Forms.ColumnHeader();
+            this.Resultat = new System.Windows.Forms.ColumnHeader();
             this.CompaLogs = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
@@ -377,8 +383,8 @@ namespace LaboAutonome1
             // 
             // ArithLogs
             // 
-            this.ArithLogs.Controls.Add(this.button1);
-            this.ArithLogs.Controls.Add(this.listView1);
+            this.ArithLogs.Controls.Add(this.UpdateBtnArith);
+            this.ArithLogs.Controls.Add(this.ArithLogs1);
             this.ArithLogs.Location = new System.Drawing.Point(4, 24);
             this.ArithLogs.Name = "ArithLogs";
             this.ArithLogs.Padding = new System.Windows.Forms.Padding(3);
@@ -386,6 +392,67 @@ namespace LaboAutonome1
             this.ArithLogs.TabIndex = 0;
             this.ArithLogs.Text = "Arith";
             this.ArithLogs.UseVisualStyleBackColor = true;
+            // 
+            // UpdateBtnArith
+            // 
+            this.UpdateBtnArith.Location = new System.Drawing.Point(24, 176);
+            this.UpdateBtnArith.Name = "UpdateBtnArith";
+            this.UpdateBtnArith.Size = new System.Drawing.Size(232, 23);
+            this.UpdateBtnArith.TabIndex = 1;
+            this.UpdateBtnArith.Text = "Update";
+            this.UpdateBtnArith.UseVisualStyleBackColor = true;
+            this.UpdateBtnArith.Click += new System.EventHandler(this.UpdateBtnArith_Click);
+            // 
+            // ArithLogs1
+            // 
+            this.ArithLogs1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Date,
+            this.Heure,
+            this.Fraction1,
+            this.Operateur,
+            this.Fraction2,
+            this.Resultat});
+            this.ArithLogs1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ArithLogs1.GridLines = true;
+            this.ArithLogs1.HideSelection = false;
+            this.ArithLogs1.Location = new System.Drawing.Point(311, 3);
+            this.ArithLogs1.Name = "ArithLogs1";
+            this.ArithLogs1.Size = new System.Drawing.Size(470, 388);
+            this.ArithLogs1.TabIndex = 0;
+            this.ArithLogs1.UseCompatibleStateImageBehavior = false;
+            this.ArithLogs1.View = System.Windows.Forms.View.Details;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Date";
+            this.Date.Width = 80;
+            // 
+            // Heure
+            // 
+            this.Heure.Text = "Heure";
+            this.Heure.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Heure.Width = 80;
+            // 
+            // Fraction1
+            // 
+            this.Fraction1.Text = "Fraction 1";
+            this.Fraction1.Width = 70;
+            // 
+            // Operateur
+            // 
+            this.Operateur.Text = "Operateur";
+            this.Operateur.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Operateur.Width = 80;
+            // 
+            // Fraction2
+            // 
+            this.Fraction2.Text = "Fraction 2";
+            this.Fraction2.Width = 70;
+            // 
+            // Resultat
+            // 
+            this.Resultat.Text = "Resultat";
+            this.Resultat.Width = 80;
             // 
             // CompaLogs
             // 
@@ -398,25 +465,6 @@ namespace LaboAutonome1
             this.CompaLogs.TabIndex = 1;
             this.CompaLogs.Text = "Compa";
             this.CompaLogs.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(311, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(470, 388);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -492,11 +540,17 @@ namespace LaboAutonome1
         private System.Windows.Forms.TabPage Logs;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage ArithLogs;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button UpdateBtnArith;
+        private System.Windows.Forms.ListView ArithLogs1;
         private System.Windows.Forms.TabPage CompaLogs;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.ColumnHeader Heure;
+        private System.Windows.Forms.ColumnHeader Fraction1;
+        private System.Windows.Forms.ColumnHeader Operateur;
+        private System.Windows.Forms.ColumnHeader Fraction2;
+        private System.Windows.Forms.ColumnHeader Resultat;
     }
 }
 
