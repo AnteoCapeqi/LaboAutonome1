@@ -58,15 +58,28 @@ namespace LaboAutonome1
             this.CompaFractComboBox = new System.Windows.Forms.ComboBox();
             this.CompaFractNum2 = new System.Windows.Forms.TextBox();
             this.CompaFractNum1 = new System.Windows.Forms.TextBox();
+            this.Logs = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.ArithLogs = new System.Windows.Forms.TabPage();
+            this.CompaLogs = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
             this.Arith.SuspendLayout();
             this.Compa.SuspendLayout();
+            this.Logs.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.ArithLogs.SuspendLayout();
+            this.CompaLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Arith);
             this.tabControl1.Controls.Add(this.Compa);
+            this.tabControl1.Controls.Add(this.Logs);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -341,6 +354,89 @@ namespace LaboAutonome1
             this.CompaFractNum1.Size = new System.Drawing.Size(171, 23);
             this.CompaFractNum1.TabIndex = 13;
             // 
+            // Logs
+            // 
+            this.Logs.Controls.Add(this.tabControl2);
+            this.Logs.Location = new System.Drawing.Point(4, 24);
+            this.Logs.Name = "Logs";
+            this.Logs.Size = new System.Drawing.Size(792, 422);
+            this.Logs.TabIndex = 2;
+            this.Logs.Text = "Logs";
+            this.Logs.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.ArithLogs);
+            this.tabControl2.Controls.Add(this.CompaLogs);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(792, 422);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // ArithLogs
+            // 
+            this.ArithLogs.Controls.Add(this.button1);
+            this.ArithLogs.Controls.Add(this.listView1);
+            this.ArithLogs.Location = new System.Drawing.Point(4, 24);
+            this.ArithLogs.Name = "ArithLogs";
+            this.ArithLogs.Padding = new System.Windows.Forms.Padding(3);
+            this.ArithLogs.Size = new System.Drawing.Size(784, 394);
+            this.ArithLogs.TabIndex = 0;
+            this.ArithLogs.Text = "Arith";
+            this.ArithLogs.UseVisualStyleBackColor = true;
+            // 
+            // CompaLogs
+            // 
+            this.CompaLogs.Controls.Add(this.button2);
+            this.CompaLogs.Controls.Add(this.listView2);
+            this.CompaLogs.Location = new System.Drawing.Point(4, 24);
+            this.CompaLogs.Name = "CompaLogs";
+            this.CompaLogs.Padding = new System.Windows.Forms.Padding(3);
+            this.CompaLogs.Size = new System.Drawing.Size(784, 394);
+            this.CompaLogs.TabIndex = 1;
+            this.CompaLogs.Text = "Compa";
+            this.CompaLogs.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(311, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(470, 388);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(24, 176);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(232, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(24, 176);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(232, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(311, 3);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(470, 388);
+            this.listView2.TabIndex = 2;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -354,6 +450,10 @@ namespace LaboAutonome1
             this.Arith.PerformLayout();
             this.Compa.ResumeLayout(false);
             this.Compa.PerformLayout();
+            this.Logs.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.ArithLogs.ResumeLayout(false);
+            this.CompaLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -389,6 +489,14 @@ namespace LaboAutonome1
         private System.Windows.Forms.ComboBox CompaFractComboBox;
         private System.Windows.Forms.TextBox CompaFractNum2;
         private System.Windows.Forms.TextBox CompaFractNum1;
+        private System.Windows.Forms.TabPage Logs;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage ArithLogs;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TabPage CompaLogs;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView listView2;
     }
 }
 
