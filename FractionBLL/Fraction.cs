@@ -33,6 +33,11 @@ namespace FractionBLL
             this.Denominateur = pDenominateur;
             this.Numerateur = pNumerateur;
         }
+        public Fraction(int pNumerateur) 
+        {
+            this.Numerateur = pNumerateur;
+            this.Denominateur = 1;
+        }
 
         public static Tuple<int,int,int> UserSimplification(Fraction fraction) 
         {

@@ -15,6 +15,14 @@ namespace TestFraction
             Fraction fraction = new Fraction(givenvalue[0],givenvalue[1]);
             Assert.IsTrue(fraction.Denominateur == ExpectedValue[0] && fraction.Numerateur == ExpectedValue[1]);
         }
+        [DataRow(new int[2] { 1, 1 }, 1 , DisplayName = "Creation d'une Fraction vide")]
+        [DataRow(new int[2] { 1, 4 }, 4, DisplayName = "Creation d'une Fraction lambda")]
+        [TestMethod]
+        public void CreateFractionObjectWithOneInt(int[] ExpectedValue, int givenvalue)
+        {
+            Fraction fraction = new Fraction(givenvalue);
+            Assert.IsTrue(fraction.Denominateur == ExpectedValue[0] && fraction.Numerateur == ExpectedValue[1]);
+        }
         [TestMethod]
         public void CreateFractionObjectValidateZeroDenominateur()
         {
