@@ -49,6 +49,10 @@ namespace LaboAutonome1
             }
             Tuple<int, int, int> tuple = Fraction.UserSimplification(fraction);
             this.ArithMultFracRes.Text = StringConstruction(tuple);
+            if (this.ArithValidation.Checked) 
+            {
+                SavingBLL.CallDALMethodArith(fraction1, fraction2, this.ArithMultFracComboBox.SelectedItem.ToString(), fraction);
+            }
 
 
 
@@ -56,7 +60,7 @@ namespace LaboAutonome1
         private static string StringConstruction(Tuple<int, int, int> tuple) 
         {
             string a;
-            if (tuple.Item2 == 0 && tuple.Item3 == 0)
+            if (tuple.Item2 == 0 || tuple.Item3 == 0)
             {
                 a = tuple.Item1.ToString();
             }
@@ -64,7 +68,7 @@ namespace LaboAutonome1
             {
                 a = tuple.Item2 + "/" + tuple.Item3;
             }
-            else if (tuple.Item1 == 0 && tuple.Item2 == 0 && tuple.Item3 == 0) 
+            else if (tuple.Item1 == 0 && tuple.Item2 == 0 && tuple.Item3 == 0)
             {
                 a = "0";
             }
@@ -116,6 +120,10 @@ namespace LaboAutonome1
                 + " " + this.CompaFractComboBox.SelectedItem.ToString() 
                 + " " + StringConstruction(tuple2)
                 + " == " + result;
+            if (this.CompaBox.Checked)
+            {
+                SavingBLL.CallDALMethodCompa(fraction1, fraction2, this.CompaFractComboBox.SelectedItem.ToString(), result.ToString());
+            }
         }
     }
 }

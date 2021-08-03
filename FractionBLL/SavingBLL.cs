@@ -7,7 +7,7 @@ using FractionDAL;
 
 namespace FractionBLL
 {
-    class SavingBLL
+    public class SavingBLL
     {
         public static void CallDALMethodArith(Fraction fraction1,Fraction fraction2,string ope,Fraction fraction3) 
         {

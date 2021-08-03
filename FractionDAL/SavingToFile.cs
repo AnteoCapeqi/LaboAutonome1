@@ -6,7 +6,7 @@ namespace FractionDAL
     public class SavingToFile
     {
         private static string GetArithLogPath(){return Path.GetFullPath("ArithLog.csv");}
-        private static string GetCompLogPath() { return Path.GetFullPath("CompaLog.csv"); }
+        private static string GetCompLogPath() {return Path.GetFullPath("CompaLog.csv");}
         public static void SaveToArithLog(Tuple<string, string, string, string> tuple)
         {
             SavingInFile(GetArithLogPath(), GetContent(tuple));
@@ -17,15 +17,15 @@ namespace FractionDAL
         }
         private static string GetContent(Tuple<string, string, string, string> tuple)
         {
-            string content = DateTime.Today.ToString() + "," + TimeZoneInfo.Local.ToString();
+            string content = "\n" + DateTime.Now.ToString("dd MMMM yyyy") + "," + DateTime.Now.ToString("HH:mm:ss");
             content += "," + tuple.Item1 + "," + tuple.Item2 + "," + tuple.Item3 + "," + tuple.Item4;
             return content;
         }
         private static void SavingInFile(string path,string content) 
         {
-            StreamWriter sw = new StreamWriter(path);
-            sw.WriteLine(content);
-            sw.Close();
+            bool test = File.Exists(path);
+            File.AppendAllText(path, content);
+           
         }
     }
 }
