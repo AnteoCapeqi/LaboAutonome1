@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQtoCSV;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,37 @@ namespace FractionDAL
 {
     public class ReadToFiles
     {
+        public static List<string[]> GetDataInFileLinq(bool file)
+        {
+            CsvFileDescription inputFileDescription = new CsvFileDescription
+            {
+                SeparatorChar = ',',
+                FirstLineHasColumnNames = true
+            };
+
+            CsvContext cc = new CsvContext();
+
+            IEnumerable<LogsDal> logs;
+            if (file == true)
+            {
+                logs =
+                //cc.Read<LogsDal>("ArithLogs.csv", inputFileDescription);
+                cc.Read<LogsDal>(SavingToFile.GetArithLogPath(), inputFileDescription);
+            }
+            else
+            {
+                logs =
+                cc.Read<LogsDal>(SavingToFile.GetArithLogPath(), inputFileDescription);
+            }
+            List<LogsDal> LogsDalList = logs.ToList();
+            List<string[]> tlist = new List<string[]>();
+            foreach (LogsDal log in LogsDalList)
+            {
+                string[] a = new string[] {log.Date,log.Heure,log.Fraction1,log.Operant,log.Fraction2,log.Resultat};
+                tlist.Add(a);
+            }
+            return tlist;
+        }
         public static List<string[]> GetDataInFile(bool file)
         {
             string content;

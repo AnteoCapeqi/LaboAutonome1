@@ -10,7 +10,7 @@ namespace FractionBLL
     {
         public static List<ArithLogs> GetArtithLogs() 
         {
-            List<string[]> content = FractionDAL.ReadToFiles.GetDataInFile(true);
+            List<string[]> content = FractionDAL.ReadToFiles.GetDataInFileLinq(true);
             List<ArithLogs> logs = new List<ArithLogs>();
             foreach (var item in content)
             {
@@ -21,7 +21,7 @@ namespace FractionBLL
         }
         public static List<CompaLogs> GetCompaLogs()
         {
-            List<string[]> content = FractionDAL.ReadToFiles.GetDataInFile(false);
+            List<string[]> content = FractionDAL.ReadToFiles.GetDataInFileLinq(false);
             List<CompaLogs> logs = new List<CompaLogs>();
             foreach (var item in content)
             {

@@ -1,5 +1,9 @@
-﻿using System;
+﻿
+using LINQtoCSV;
+using System;
+using System.Collections.Generic;
 using System.IO;
+
 
 namespace FractionDAL
 {
@@ -27,5 +31,6 @@ namespace FractionDAL
             File.AppendAllText(path, content);
            
         }
+        
     }
 }
