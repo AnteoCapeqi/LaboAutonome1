@@ -42,6 +42,11 @@ namespace FractionBLL
         public static Tuple<int,int,int> UserSimplification(Fraction fraction) 
         {
             Tuple<int, int, int> SimpleFraction = new Tuple<int, int, int>( 0, 0, 0 );
+            if (fraction.numerateur < 0 && fraction.denominateur < 0) 
+            {
+                fraction.numerateur = Math.Abs(fraction.numerateur);
+                fraction.denominateur = Math.Abs(fraction.denominateur);
+            }
             if (fraction.numerateur > fraction.Denominateur)
             {
                 decimal tempRes = fraction.Numerateur / fraction.Denominateur;

@@ -30,7 +30,7 @@ namespace FractionDAL
             else
             {
                 logs =
-                cc.Read<LogsDal>(SavingToFile.GetArithLogPath(), inputFileDescription);
+                cc.Read<LogsDal>(SavingToFile.GetCompLogPath(), inputFileDescription);
             }
             List<LogsDal> LogsDalList = logs.ToList();
             List<string[]> tlist = new List<string[]>();
